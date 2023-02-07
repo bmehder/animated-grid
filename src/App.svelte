@@ -38,16 +38,6 @@
 </div>
 
 <style>
-  html {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
-      Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    --purp: radial-gradient(
-      circle farthest-corner at 10% 20%,
-      rgba(64, 84, 178, 1) 0%,
-      rgba(219, 2, 234, 1) 90%
-    );
-  }
-
   .grid {
     display: grid;
     --col1: 1fr;
@@ -183,5 +173,12 @@
   :global(body) {
     margin: 0;
     padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+      Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --purp: radial-gradient(
+      circle farthest-corner at 10% 20%,
+      rgba(64, 84, 178, 1) 0%,
+      rgba(219, 2, 234, 1) 90%
+    );
   }
 </style>
