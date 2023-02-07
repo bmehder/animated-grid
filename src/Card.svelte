@@ -3,100 +3,100 @@
   export let color = ''
 </script>
 
-<div class="item">
+<article>
   <p>{name}</p>
   <p class="color">{color}</p>
-</div>
+</article>
 
 <style>
-  .item {
-    background-color: #eee;
-    text-align: center;
+  article {
     display: grid;
     align-content: center;
     container: item / size;
-    transition: scale 0.2s;
     background-position: center;
     background-size: cover;
+    background-color: #eee;
+    text-align: center;
     overflow: hidden;
+    transition: scale 0.2s;
   }
 
-  .item p {
-    font-size: 15cqmin;
-    color: black;
-    font-weight: 900;
+  article p {
+    position: relative;
     margin: 0;
     padding: 5px;
-    position: relative;
+    color: black;
+    font-size: 15cqmin;
+    font-weight: 900;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: white;
   }
 
-  .item p:before {
+  article p:before {
     content: '';
     display: block;
-    background: var(--purp);
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: -1;
+    background: var(--purple);
     mix-blend-mode: color;
+    z-index: -1;
   }
 
-  .item p.color {
+  article p.color {
     font-size: 5cqw;
     text-transform: uppercase;
     letter-spacing: 0.2cqmin;
   }
 
-  .item:where(:hover, :focus) {
+  article:where(:hover, :focus) {
+    align-content: space-between;
     color: white;
-    scale: 1.1;
-    z-index: 2;
     border-radius: 20px;
     box-shadow: 0 0 50px 20px rgba(0, 0, 0, 0.5);
-    align-content: space-between;
+    scale: 1.1;
+    z-index: 2;
   }
 
-  :global(.grid:has(.item:hover) .item:not(:hover)) {
+  :global(.grid:has(article:hover) article:not(:hover)) {
     mix-blend-mode: luminosity;
   }
 
-  .item:nth-child(1) {
+  article:nth-child(1) {
     background-image: url(/shoes/vapormax-plus-black.jpg);
     transform-origin: top left;
   }
-  .item:nth-child(2) {
+  article:nth-child(2) {
     background-image: url(/shoes/vapirmax-ashphalt.jpg);
     transform-origin: top center;
   }
-  .item:nth-child(3) {
+  article:nth-child(3) {
     background-image: url(/shoes/vaporma-plus-grape.jpg);
     transform-origin: top right;
   }
-  .item:nth-child(4) {
+  article:nth-child(4) {
     background-image: url(/shoes/airmax-leopard.webp);
     transform-origin: left center;
   }
-  .item:nth-child(5) {
+  article:nth-child(5) {
     background-image: url(/shoes/airmax-wheat-gold.jpg);
     transform-origin: center center;
   }
-  .item:nth-child(6) {
+  article:nth-child(6) {
     background-image: url(/shoes/flyknit-zebra.jpg);
     transform-origin: right center;
   }
-  .item:nth-child(7) {
+  article:nth-child(7) {
     background-image: url(/shoes/Nike-Air-Max-270-React-Camo-Black-On-Foot-Side_w900.jpg);
     transform-origin: bottom left;
   }
-  .item:nth-child(8) {
+  article:nth-child(8) {
     background-image: url(/shoes/270-black-gold.png);
     transform-origin: bottom center;
   }
-  .item:nth-child(9) {
+  article:nth-child(9) {
     background-image: url(/shoes/270-black-gold.png);
     transform-origin: bottom right;
   }
