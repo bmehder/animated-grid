@@ -10,6 +10,7 @@
 
 <style>
   article {
+    --size: 1.5rem;
     display: grid;
     align-content: center;
     container: item / size;
@@ -18,13 +19,13 @@
     background-color: #eee;
     text-align: center;
     overflow: hidden;
-    transition: scale 0.2s;
+    transition: scale 0.2s ease-in-out;
   }
 
   article p {
     position: relative;
     margin: 0;
-    padding: 5px;
+    padding: calc(var(--size) / 2);
     color: black;
     font-size: 15cqmin;
     font-weight: 900;
@@ -54,8 +55,8 @@
   article:where(:hover, :focus) {
     align-content: space-between;
     color: white;
-    border-radius: 20px;
-    box-shadow: 0 0 50px 20px rgba(0, 0, 0, 0.5);
+    border-radius: var(--size);
+    box-shadow: 0 0 calc(var(--size) * 2) var(--size) rgba(0, 0, 0, 0.5);
     scale: 1.1;
     z-index: 2;
   }

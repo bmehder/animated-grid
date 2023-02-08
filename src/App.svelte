@@ -43,7 +43,7 @@
     grid-template-rows: var(--row1) var(--row2) var(--row3);
     height: 100vh;
     background-image: var(--purple);
-    transition: all 0.2s;
+    transition: all 0.2s ease-in-out;
   }
 
   .grid:has(.item:nth-child(3n + 1):hover) {
